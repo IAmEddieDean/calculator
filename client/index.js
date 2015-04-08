@@ -26,39 +26,52 @@ $('.operator').click(function(){
   operator = $(this).text();
   newNumber = number;
   number = '';
-  result.text('');
+  result.text(newNumber);
 });
-  $('.operatorR').click(function(){
-    operator = $(this).text();
-    newNumber = number;
-    number = '';
-    result.text('');
-});
+$('#dec').click(function(){
+    for(var i = 0; i < number.length; i++){
+      if (number[i] = '.') {
+        number = number;
+      }
+      else {
+        number = number + $(this).text();
+    }
+  }
+  result.text(number);
+})
 $('#clear').click(function(){
   number = '';
   result.text('');
-    newNumber = '';
+  newNumber = '';
+});
+$('#posNeg').click(function(){
+  number = parseFloat(number * -1);
+  result.text(number);
+});
+$('#perc').click(function(){
+  number = parseFloat(number / 100);
+  result.text(number);
 });
 $('#equal').click(function(){
+  //number = parseFloat(number * 1);
+  //newNumber = parseFloat(newNumber * 1);
   switch(operator) {
     case '+':
-      result = (parseFloat(number) + parseFloat(newNumber)).toString(10);
+      number = (parseFloat((number * 1) + (newNumber * 1))).toString(10);
       break;
     case '-':
-      result = (parseFloat(number) - parseFloat(newNumber)).toString(10);
+      number = (parseFloat((newNumber * 1) - (number * 1))).toString(10);
       break;
     case '*':
-      result = (parseFloat(number) * parseFloat(newNumber)).toString(10);
+      number = (parseFloat((number * 1) * (newNumber * 1))).toString(10);
       break;
     case '/':
-      result = (parseFloat(number) / parseFloat(newNumber)).toString(10);
-      break;
-    //case '%':
-      //result = (parseFloat(number) / 100).toString(10);
+      number = (parseFloat((newNumber * 1) / (number * 1))).toString(10);
   }
+  //debugger;
   result.text(number);
   checkLength(number);
-  number = '';
+  //number = '';
   newNumber = '';
 });
 }
