@@ -2,13 +2,37 @@ doctype html
 html
   head
     meta(charset='utf-8')      
-    title Apollo
+    title Calculator
     link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href=isProd ? '/index.min.css' : '/index.css')
     link(rel='shortcut icon', href='/favicon.ico')
   body
-    img#apollo(src='/assets/apollo.jpg')
-    h1#title Apollo
+    #calc
+      #total
+      #ops
+        a#operatorR /
+        a#operator %
+        a.posNeg +/-
+        a.clear C
+        a#operatorR *
+        a#number 9
+        a#number 8
+        a#number 7
+        a#operatorR -
+        a#number 6
+        a#number 5
+        a#number 4
+        a#operatorR +
+        a#number 3
+        a#number 2
+        a#number 1
+        a.equal =
+        a.dec .
+      #zero
+        a.nil 0
+        
+      
 
     script(src='/vendor/lodash/lodash.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
+    script(src='/vendor/jquery/dist/jquery.min.js') 
