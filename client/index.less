@@ -4,6 +4,9 @@ body{
   //padding: 0;
   background-color: #292c33;
 }
+a {
+  cursor: pointer;
+}
 #calc {
 	background-color: #22252b;
 	width: 310px;
@@ -17,6 +20,7 @@ body{
     height: 70px;
     width: 296px;
     margin:auto;
+    color: red;
     //background-color: #22252b;
     background-color: white;
     margin-bottom: 5px;
@@ -25,10 +29,10 @@ body{
     font-size: 60px;
     padding: 0 5px;
 }
-#ops {
+#buttons {
   margin-top: 5px;
 }
-#ops a {
+#buttons a {
   font-family: 'Lato', sans-serif;
 	display: block;
 	width: 71px;
@@ -64,11 +68,11 @@ body{
 	//background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
 	//border-radius: 10px;
 }
-#ops > #operatorR {
+#buttons > .operatorR {
   background-color: #ff8e00;
   color: white;
 }
-#ops > .equal {
+#buttons > #equal {
   background-color: #ff8e00;
   color: white;
 }

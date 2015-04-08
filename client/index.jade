@@ -7,32 +7,33 @@ html
     link(rel='stylesheet', href=isProd ? '/index.min.css' : '/index.css')
     link(rel='shortcut icon', href='/favicon.ico')
   body
+    script(src='/vendor/jquery/dist/jquery.min.js')
     #calc
       #total
-      #ops
-        a#operatorR /
-        a#operator %
-        a.posNeg +/-
-        a.clear C
-        a#operatorR *
-        a#number 9
-        a#number 8
-        a#number 7
-        a#operatorR -
-        a#number 6
-        a#number 5
-        a#number 4
-        a#operatorR +
-        a#number 3
-        a#number 2
-        a#number 1
-        a.equal =
-        a.dec .
+      #buttons
+        a.operatorR /
+        a.operator %
+        a#posNeg +/-
+        a#clear C
+        a.operatorR *
+        a.number 9
+        a.number 8
+        a.number 7
+        a.operatorR -
+        a.number 6
+        a.number 5
+        a.number 4
+        a.operatorR +
+        a.number 3
+        a.number 2
+        a.number 1
+        a#equal =
+        a#dec .
       #zero
-        a.nil 0
+        a.number 0
         
       
 
     script(src='/vendor/lodash/lodash.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
-    script(src='/vendor/jquery/dist/jquery.min.js') 
+     
