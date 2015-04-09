@@ -1,7 +1,6 @@
 'use strict';
 
 $(document).ready(init);
-
 var storedNumber;
 var storedNumber2;
 var operator = '';
@@ -32,13 +31,13 @@ function clickDecimal(){
 function clear(){
   if ($('#display').text()==='0'){
     storedNumber = undefined;
-    storedNumber2 = undefined;
     $('#clear').text('C');
   }else {
     storedNumber = parseFloat($('#display').text());
     $('#clear').text('AC');
   }
   $('#display').text('0');
+  storedNumber2 = undefined;
 }
 
 function clickPercent(){
@@ -46,19 +45,13 @@ function clickPercent(){
   var output = display / 100;
   $('#display').text(output);
 }
+
 function clickNeg(){
   var display = -1 * (parseFloat($('#display').text()));
   $('#display').text(display);
 }
 
 function clickOperator(){
-  /*if (storedNumber2 !== undefined){
-    performCalculation();
-  }
-  else {
-    storedNumber = parseFloat($('#display').text());
-    $('#display').text('0');
-  }*/
   storedNumber = parseFloat($('#display').text());
   operator = $(this).text();
   $('#display').text('0');
