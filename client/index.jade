@@ -9,13 +9,13 @@ html
   body
     script(src='/vendor/jquery/dist/jquery.min.js')
     #calc
-      #total
+      #display 0
       #buttons
-        a.operator.orange /
+        a.operator.orange ÷
         a#perc %
         a#posNeg +/-
-        a#clear C
-        a.operator.orange *
+        a#clear AC
+        a.operator.orange ×
         a.number 9
         a.number 8
         a.number 7
@@ -28,7 +28,7 @@ html
         a.number 2
         a.number 1
         a#equal =
-        a#dec .
+        a#decimal .
       #zero
         a.number 0
         
@@ -36,4 +36,14 @@ html
 
     script(src='/vendor/lodash/lodash.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
-     
+      script.
+        function() {
+            var path = '//easy.myfonts.net/v2/js?sid=10259(font-family=Helvetica+Neue+55+Roman)&sid=10265(font-family=Helvetica+Neue+65+Medium)&sid=10269(font-family=Helvetica+Neue+25+UltraLight)&key=3LuCBJvfni',
+                protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+                trial = document.createElement('script');
+            trial.type = 'text/javascript';
+            trial.async = true;
+            trial.src = protocol + path;
+            var head = document.getElementsByTagName("head")[0];
+            head.appendChild(trial);
+        })();
