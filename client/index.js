@@ -28,7 +28,7 @@ $('.operator').click(function(){
   number = '';
   result.text(newNumber);
 });
-$('#dec').click(function(){
+/*$('#dec').click(function(){
     for(var i = 0; i < number.length; i++){
       if (number[i] = '.') {
         number = number;
@@ -38,7 +38,7 @@ $('#dec').click(function(){
     }
   }
   result.text(number);
-})
+})*/
 $('#clear').click(function(){
   number = '';
   result.text('');
